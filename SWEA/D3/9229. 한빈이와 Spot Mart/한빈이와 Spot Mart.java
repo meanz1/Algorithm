@@ -25,7 +25,6 @@ class Solution
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        StringBuilder sb = new StringBuilder();
         int T = Integer.parseInt(st.nextToken());
         for(int t = 1; t<= T; t++){
             st = new StringTokenizer(br.readLine());
@@ -39,8 +38,7 @@ class Solution
                 snacks[i] = Integer.parseInt(st.nextToken());
             }
             combination(0, 0);
-            sb.append("#"+t+" "+weight+"\n");
+            System.out.println(String.format("#%d %d", t, weight));
         }
-        System.out.println(sb);
     }
 }
