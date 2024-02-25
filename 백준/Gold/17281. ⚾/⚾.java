@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -12,7 +10,6 @@ public class Main {
     static int[] selected;
     static int[] order;
     static BaseBall b;
-    static Queue<Integer> q;
 
     static class BaseBall {
         int first, second, third, out, state; // 1루, 2루, 3루, 아웃수, 현재 타자
@@ -95,7 +92,6 @@ public class Main {
             // 이 순서의 선수들로 N게임 진행해야함.
             b = new BaseBall(0, 0, 0, 0, 0); // state는 selected[0]
             for (int i = 0; i < N; i++) {
-                q = new ArrayDeque<>();
                 setOrder(i);
                 b.first = 0;
                 b.second = 0;
@@ -137,5 +133,4 @@ public class Main {
         permutation(0);
         System.out.println(answer);
     }
-
 }
